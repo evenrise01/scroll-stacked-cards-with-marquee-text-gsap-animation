@@ -2,64 +2,98 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="intro">
+        <h1>We design spaces that don&apos;t just exist.</h1>
+      </section>
+      <section className="cards">
+        <div className="card">
+          <div className="card-marquee">
+            <div className="marquee">
+              <h1>Design Beyond Boundaries</h1>
+              <h1>Built for Tomorrow</h1>
+              <h1>Real Impact</h1>
+              <h1>Digital Visions</h1>
+            </div>
+          </div>
+          <div className="card-wrapper">
+            <div className="card-content">
+              <div className="card-title">
+                <h1>Curved Horizon</h1>
+              </div>
+              <div className="card-description">
+                <p>
+                  A futuristic residence that plays with curvature and flow,
+                  blending bold geometry with natural topograpgy.
+                </p>
+              </div>
+            </div>
+            <div className="card-img">
+              <img src="/card-img-1.jpg" alt="" />
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="card">
+          <div className="card-wrapper">
+            <div className="card-content">
+              <div className="card-title">
+                <h1>Glass Haven</h1>
+              </div>
+              <div className="card-description">
+                <p>
+                  A sleek pavilion of pure transparency, openess, and light,
+                  designed to dissolve into it&apos;s environemnt.
+                </p>
+              </div>
+            </div>
+            <div className="card-img">
+              <img src="/card-img-2.jpg" alt="" />
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+
+        <div className="card">
+          <div className="card-wrapper">
+            <div className="card-content">
+              <div className="card-title">
+                <h1>Moss Cube</h1>
+              </div>
+              <div className="card-description">
+                <p>
+                  A minimalist cube home crowned with a living moss dome,
+                  merging micro-architecture with ecological design.
+                </p>
+              </div>
+            </div>
+            <div className="card-img">
+              <img src="/card-img-3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-wrapper">
+            <div className="card-content">
+              <div className="card-title">
+                <h1>Floating Shelter</h1>
+              </div>
+              <div className="card-description">
+                <p>
+                  This design explores an ethereal structure perched on a grassy
+                  islet, seemingly above water.
+                </p>
+              </div>
+            </div>
+            <div className="card-img">
+              <img src="/card-img-4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="outro">
+        <h1>Architecture reimagined for the modern era.</h1>
+      </section>
+    </>
   );
 }
