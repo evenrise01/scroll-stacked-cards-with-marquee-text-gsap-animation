@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
@@ -24,12 +24,12 @@ export default function Home() {
               <div className="card-description">
                 <p>
                   A futuristic residence that plays with curvature and flow,
-                  blending bold geometry with natural topograpgy.
+                  blending bold geometry with natural topography.
                 </p>
               </div>
             </div>
             <div className="card-img">
-              <img src="/card-img-1.jpg" alt="" />
+              <img src="/curved-horizon.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Home() {
               </div>
             </div>
             <div className="card-img">
-              <img src="/card-img-2.jpg" alt="" />
+              <img src="/glass-haven.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
               </div>
             </div>
             <div className="card-img">
-              <img src="/card-img-3.jpg" alt="" />
+              <img src="/cube-house.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
             </div>
             <div className="card-img">
-              <img src="/card-img-4.jpg" alt="" />
+              <img src="/floating-shelter.jpg" alt="" />
             </div>
           </div>
         </div>
