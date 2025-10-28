@@ -22,15 +22,22 @@ export default function Home() {
     const titles = gsap.utils.toArray<HTMLElement>(".card-title h1");
     titles.forEach((title) => {
       const split = new SplitText(title, {
-        type: "char",
+        type: "chars",
         charsClass: "char",
-        tag: "div",
       });
+      
+      // Wrap each char's content in a span
       split.chars.forEach((char) => {
-        char.innerHTML = `<span>${char.textContent}</span>`;
-        // if (char instanceof HTMLElement) {
-        //   char.innerHTML = `<span>${char.textContent}</span>`;
-        // }
+        const text = char.textContent;
+        char.textContent = ''; // Clear it first
+        const span = document.createElement('span');
+        span.textContent = text;
+        char.appendChild(span);
+      });
+      
+      // Set initial state
+      gsap.set(title.querySelectorAll(".char span"), { 
+        x: "100%"
       });
     });
 
@@ -186,7 +193,12 @@ export default function Home() {
       ScrollTrigger.create({
         trigger: card,
         start: "top top",
-        onEnter: () => animateContentIn(cardTitleChars, cardDescription),
+        onEnter: () => {
+          // console.log(
+          //   `Card ${index} entering, animating ${cardTitleChars.length} chars`
+          // );
+          animateContentIn(cardTitleChars, cardDescription);
+        },
         onLeaveBack: () => animateContentOut(cardTitleChars, cardDescription),
       });
     });
