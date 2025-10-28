@@ -165,7 +165,7 @@ section {
 }
 
 .card:nth-child(2) {
-  margin-top: 50%;
+  margin-top: 50vh;
 }
 
 .char {
